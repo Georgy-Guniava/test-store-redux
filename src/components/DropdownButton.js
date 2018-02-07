@@ -10,10 +10,7 @@ const i = 1;
 export default class DropdownSortButton extends Component {
 
     onSelect(e) {
-        this.props.typeOfFiltration({ id:e.target.id, revers: e.target.revers});
-
-
-
+        this.props.typeOfFiltration(e.target.id);
     };
 
     render() {
@@ -44,6 +41,6 @@ export default class DropdownSortButton extends Component {
 }
 
 DropdownSortButton.propTypes = {
-    dropDownItems: PropTypes.array.isRequired
+    dropDownItems: PropTypes.array.isRequired,
     typeOfFiltration: PropTypes.func.isRequired
 };

@@ -13,28 +13,24 @@ const initialState = {
     dropDownItems: [{
         id: 'name',
         active: false,
-        label: 'Name',
-        revers: false
+        label: 'Name'
+
     }, {
         id: 'price',
         active: false,
-        label: 'Price ascending',
-        revers: false
+        label: 'Price ascending'
     }, {
         id: 'priceDes',
         active: false,
-        label: 'Price descending',
-        revers: true
+        label: 'Price descending'
     }, {
         id: 'rating',
         active: false,
-        label: 'Rating ascending',
-        revers: false
+        label: 'Rating ascending'
     }, {
         id: 'ratingDes',
         active: false,
-        label: 'Rating descending',
-        revers: true
+        label: 'Rating descending'
     }]
 
 };
@@ -82,20 +78,18 @@ export default function productList(state = initialState, action) {
             let filterProduct = state.products;
             let newFilterProducts = [];
             let newDropDownItems = [];
+            let type = action.payload.replace('Des','');
 
             state.dropDownItems.forEach(element => {
-                element.active = element.id === action.payload.id;
+                element.active = element.id === action.payload;
                 newDropDownItems.push(element);
             });
 
             filterProduct.sort((a,b) => {
-                if (a[action.payload.replacer()] === b[type]) return 0;
+                if (a[type] === b[type]) return 0;
                 return a[type] > b[type] ? 1 : -1;
-            })
-
-
-
-
+            });
+            if(action.payload.match('Des', 'i')) filterProduct.reverse();
 
 
             filterProduct.forEach((product,i) => {
