@@ -1,41 +1,50 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Header from "../components/Header";
 import ProductList from "../components/ProductList";
-// import { bindActionCreators } from 'redux'
-// import User from '../components/User'
-// import Page from '../components/Page'
-// import * as pageActions from '../actions/PageActions'
+import Paginate from '../components/Pagination';
+import { bindActionCreators } from 'redux';
+import * as paginationActions from '../actions/PaginationActions';
+import SearchBar from '../components/SearchBar';
+import * as searchActions from '../actions/SearchActions';
+import DropdownSortButton from '../components/DropdownButton';
+import * as dropdownSortButtonActions from '../actions/DropdownSortButtonActions';
 
 class App extends Component {
     render() {
-        // const { productList } = this.props;
-        console.log('@@@@@@@@@@@@@@@@2', this.props.products, this.state )
-        // const { user, page } = this.props
-        // const { getPhotos } = this.props.pageActions
+        const { productList } = this.props;
+        const { setActivePageNumber } = this.props.paginationActions;
+        const { onSearch } =  this.props.searchActions;
+        const { typeOfFiltration } =  this.props.dropdownSortButtonActions;
 
-        return <div className='row'>
+        return <div >
             <Header/>
-            {/*<ProductList products={productList.products} />*/}
-            {/*<User name={user.name} />*/}
-            {/*<Page photos={page.photos} year={page.year} getPhotos={getPhotos} fetching={page.fetching}/>*/}
+                <div className="container">
+                    <div className="row">
+                        <SearchBar onSearch={onSearch}/>
+                        <DropdownSortButton dropDownItems={productList.dropDownItems} typeOfFiltration={typeOfFiltration}/>
+                    </div>
+                    <div className="row">
+                        <ProductList products={productList.productsList} />
+                    </div>
+                    <Paginate products={productList.products} active={productList.active} setActivePageNumber={setActivePageNumber}  />
+                </div>
         </div>
     }
 }
 
 function mapStateToProps(state) {
-    console.log('@@@@@@@@@@@@@@@@2', state)
     return {
-        products: state.productList.products
-        // user: state.user,
-        // page: state.page
+        productList: state.productList
     }
 }
-//
-// function mapDispatchToProps(dispatch) {
-//     return {
-//         pageActions: bindActionCreators(pageActions, dispatch)
-//     }
-// }
 
-export default connect(mapStateToProps)(App)
+function mapDispatchToProps(dispatch) {
+    return {
+        paginationActions: bindActionCreators(paginationActions, dispatch),
+        searchActions: bindActionCreators(searchActions, dispatch),
+        dropdownSortButtonActions: bindActionCreators(dropdownSortButtonActions, dispatch)
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)

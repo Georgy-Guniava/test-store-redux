@@ -8,13 +8,16 @@
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-bootstrap": "^0.32.1",
+    "react-css-themr": "^2.1.2",
     "react-dom": "^16.2.0",
+    "react-rater": "^0.4.8",
+    "react-rater-plus": "^0.2.0",
     "react-redux": "^5.0.6",
     "react-scripts": "1.1.0",
     "redux": "^3.7.2",
     "redux-logger": "2.5.2",
     "redux-thunk": "1.0.3",
-    "react-rater": "^0.4.8"
+    "react-inner-html": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -5,168 +5,216 @@
       "description": "a powerful and not expensive smartphone",
       "rating": 4.5,
       "price": 13000,
-      "img": "img.jpg"
+      "img": "img.jpg",
+      "highlightedName":"Redmi 4 Pro",
+      "highlightedDescription":"a powerful and not expensive smartphone"
     },
     {
       "name": "NOKIA 3310",
       "description": "A legendary phone that can not be destroyed",
       "rating": 5,
       "price": 3310,
-      "img": "img.jpg"
+      "img": "img.jpg",
+      "highlightedName":"NOKIA 3310",
+      "highlightedDescription":"A legendary phone that can not be destroyed"
     },
     {
       "name": "NOKIA 6303",
       "description": "A legendary phone that can not be destroyed",
       "rating": 4.5,
       "price": 4000,
-      "img": "img.jpg"
+      "img": "img.jpg",
+      "highlightedName":"NOKIA 6303",
+      "highlightedDescription":"A legendary phone that can not be destroyed"
     },
     {
       "name": "Nexus 4",
       "description": "a powerful and not expensive smartphone",
       "rating": 4.5,
       "price": 16000,
-      "img": "img.jpg"
+      "img": "img.jpg",
+      "highlightedName":"Nexus 4",
+      "highlightedDescription":"a powerful and not expensive smartphone"
     },
     {
       "name": "Nexus 5",
       "description": "a powerful and not expensive smartphone",
       "rating": 5,
       "price": 18000,
-      "img": "img.jpg"
+      "img": "img.jpg",
+      "highlightedName":"Nexus 5",
+      "highlightedDescription":"a powerful and not expensive smartphone"
     },
     {
       "name": "Redmi 4 Pro",
       "description": "a powerful and not expensive smartphone",
       "rating": 4.5,
       "price": 13000,
-      "img": "img.jpg"
+      "img": "img.jpg",
+      "highlightedName":"Redmi 4 Pro",
+      "highlightedDescription":"a powerful and not expensive smartphone"
     },
     {
       "name": "Redmi 4 Pro",
       "description": "a powerful and not expensive smartphone",
       "rating": 4.5,
       "price": 13000,
-      "img": "img.jpg"
+      "img": "img.jpg",
+      "highlightedName":"Redmi 4 Pro",
+      "highlightedDescription":"a powerful and not expensive smartphone"
     },
     {
       "name": "NOKIA 3310",
       "description": "A legendary phone that can not be destroyed",
       "rating": 5,
       "price": 3310,
-      "img": "img.jpg"
+      "img": "img.jpg",
+      "highlightedName":"NOKIA 3310",
+      "highlightedDescription":"A legendary phone that can not be destroyed"
     },
     {
       "name": "NOKIA 6303",
       "description": "A legendary phone that can not be destroyed",
       "rating": 4.5,
       "price": 4000,
-      "img": "img.jpg"
+      "img": "img.jpg",
+      "highlightedName":"NOKIA 6303",
+      "highlightedDescription":"A legendary phone that can not be destroyed"
     },
     {
       "name": "Nexus 4",
       "description": "a powerful and not expensive smartphone",
       "rating": 4.5,
       "price": 16000,
-      "img": "img.jpg"
+      "img": "img.jpg",
+      "highlightedName":"Nexus 4",
+      "highlightedDescription":"a powerful and not expensive smartphone"
     },
     {
       "name": "Nexus 5",
       "description": "a powerful and not expensive smartphone",
       "rating": 5,
       "price": 18000,
-      "img": "img.jpg"
+      "img": "img.jpg",
+      "highlightedName":"Nexus 5",
+      "highlightedDescription":"a powerful and not expensive smartphone"
     },
     {
       "name": "Redmi 4 Pro",
       "description": "a powerful and not expensive smartphone",
       "rating": 4.5,
       "price": 13000,
-      "img": "img.jpg"
+      "img": "img.jpg",
+      "highlightedName":"Redmi 4 Pro",
+      "highlightedDescription":"a powerful and not expensive smartphone"
     },
     {
       "name": "Redmi 4 Pro",
       "description": "a powerful and not expensive smartphone",
       "rating": 4.5,
       "price": 13000,
-      "img": "img.jpg"
+      "img": "img.jpg",
+      "highlightedName":"Redmi 4 Pro",
+      "highlightedDescription":"a powerful and not expensive smartphone"
     },
     {
       "name": "NOKIA 3310",
       "description": "A legendary phone that can not be destroyed",
       "rating": 5,
       "price": 3310,
-      "img": "img.jpg"
+      "img": "img.jpg",
+      "highlightedName":"NOKIA 3310",
+      "highlightedDescription":"A legendary phone that can not be destroyed"
     },
     {
       "name": "NOKIA 6303",
       "description": "A legendary phone that can not be destroyed",
       "rating": 4.5,
       "price": 4000,
-      "img": "img.jpg"
+      "img": "img.jpg",
+      "highlightedName":"NOKIA 6303",
+      "highlightedDescription":"A legendary phone that can not be destroyed"
     },
     {
       "name": "Nexus 4",
       "description": "a powerful and not expensive smartphone",
       "rating": 4.5,
       "price": 16000,
-      "img": "img.jpg"
+      "img": "img.jpg",
+      "highlightedName":"Nexus 4",
+      "highlightedDescription":"a powerful and not expensive smartphone"
     },
     {
       "name": "Nexus 5",
       "description": "a powerful and not expensive smartphone",
       "rating": 5,
       "price": 18000,
-      "img": "img.jpg"
+      "img": "img.jpg",
+      "highlightedName":"Nexus 5",
+      "highlightedDescription":"a powerful and not expensive smartphone"
     },
     {
       "name": "Redmi 4 Pro",
       "description": "a powerful and not expensive smartphone",
       "rating": 4.5,
       "price": 13000,
-      "img": "img.jpg"
+      "img": "img.jpg",
+      "highlightedName":"Redmi 4 Pro",
+      "highlightedDescription":"a powerful and not expensive smartphone"
     },
     {
       "name": "Redmi 4 Pro",
       "description": "a powerful and not expensive smartphone",
       "rating": 4.5,
       "price": 13000,
-      "img": "img.jpg"
+      "img": "img.jpg",
+      "highlightedName":"Redmi 4 Pro",
+      "highlightedDescription":"a powerful and not expensive smartphone"
     },
     {
       "name": "NOKIA 3310",
       "description": "A legendary phone that can not be destroyed",
       "rating": 5,
       "price": 3310,
-      "img": "img.jpg"
+      "img": "img.jpg",
+      "highlightedName":"NOKIA 3310",
+      "highlightedDescription":"A legendary phone that can not be destroyed"
     },
     {
       "name": "NOKIA 6303",
       "description": "A legendary phone that can not be destroyed",
       "rating": 4.5,
       "price": 4000,
-      "img": "img.jpg"
+      "img": "img.jpg",
+      "highlightedName":"NOKIA 6303",
+      "highlightedDescription":"A legendary phone that can not be destroyed"
     },
     {
       "name": "Nexus 4",
       "description": "a powerful and not expensive smartphone",
       "rating": 4.5,
       "price": 16000,
-      "img": "img.jpg"
+      "img": "img.jpg",
+      "highlightedName":"Nexus 4",
+      "highlightedDescription":"a powerful and not expensive smartphone"
     },
     {
       "name": "Nexus 5",
       "description": "a powerful and not expensive smartphone",
       "rating": 5,
       "price": 18000,
-      "img": "img.jpg"
+      "img": "img.jpg",
+      "highlightedName":"Nexus 5",
+      "highlightedDescription":"a powerful and not expensive smartphone"
     },
     {
       "name": "Redmi 4 Pro",
       "description": "a powerful and not expensive smartphone",
       "rating": 4.5,
       "price": 13000,
-      "img": "img.jpg"
+      "img": "img.jpg",
+      "highlightedName":"Redmi 4 Pro",
+      "highlightedDescription":"a powerful and not expensive smartphone"
     }
 
   ]
