@@ -1,15 +1,18 @@
 import {products} from '../product.json'
 
-let productList=[];
+
+let List=[];
 products.forEach((product,i) => {
-    if(i <= 3) return productList.push(product);
+    if(i <= 3) return List.push(product);
 });
 
 
 const initialState = {
     products: products,
-    productsList: productList,
+    productsList: List,
     active: 1,
+    activeProduct: List[0],
+    lgShow: false,
     dropDownItems: [{
         id: 'name',
         active: false,
@@ -66,12 +69,15 @@ export default function productList(state = initialState, action) {
                     return foundProduct.push(product);
                 }
             });
+
             foundProduct.forEach((product,i) => {
 
                 if (i+1 > (state.active - 1) * 4 && i+1 <= state.active * 4) {
                     newFoundProduct.push(product);
                 }
             });
+
+
             return { ...state, products: foundProduct, productsList: newFoundProduct };
 
         case 'TYPE_OF_FILTRATION':
@@ -100,6 +106,14 @@ export default function productList(state = initialState, action) {
             });
             return { ...state, products: filterProduct, productsList: newFilterProducts, dropDownItems: newDropDownItems};
 
+
+        case 'SHOW_MODAL':
+
+            return { ...state, activeProduct: state.productsList[action.payload], lgShow: true};
+
+        case 'CLOSE_MODAL':
+
+            return { ...state, lgShow: false};
 
         default:
             return {...state}

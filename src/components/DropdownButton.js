@@ -8,6 +8,10 @@ const i = 1;
 
 
 export default class DropdownSortButton extends Component {
+    constructor(props) {
+        super(props);
+        this.onSelect = this.onSelect.bind(this);
+    }
 
     onSelect(e) {
         this.props.typeOfFiltration(e.target.id);
@@ -28,9 +32,8 @@ export default class DropdownSortButton extends Component {
                     {dropDownItems.map(item => <MenuItem key={item.id}
                                                          id={item.id}
                                                          active={item.active}
-                                                         revers={item.revers}
                                                          value={item.id}
-                                                         onClick={this.onSelect.bind(this)} >
+                                                         onClick={this.onSelect} >
                         {item.label}
                     </MenuItem>)}
 
