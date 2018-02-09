@@ -1,17 +1,9 @@
-import {products} from '../product.json'
-
-
-let List=[];
-products.forEach((product,i) => {
-    if(i <= 3) return List.push(product);
-});
-
-
 const initialState = {
-    products: products,
-    productsList: List,
-    active: 1,
-    activeProduct: List[0],
+    allProducts: [],
+    products: [],
+    productsList: [],
+    active: NaN,
+    activeProduct: {},
     lgShow: false,
     dropDownItems: [{
         id: 'name',
@@ -40,6 +32,15 @@ const initialState = {
 
 export default function productList(state = initialState, action) {
     switch (action.type) {
+        case 'LOADING_FIRST_DATA':
+
+
+            return { ...state, allProducts: action.payload.products,
+                               products: action.payload.products,
+                               productsList: action.payload.List,
+                               activeProduct: action.payload.List[0],
+                               active: 1 };
+
         case 'SET_ACTIVE_PAGE_NUMBER':
 
             let newProductList = [];
@@ -55,7 +56,7 @@ export default function productList(state = initialState, action) {
 
             let foundProduct=[];
             let newFoundProduct=[];
-            products.forEach((product,i) => {
+            state.allProducts.forEach((product,i) => {
                 if(action.payload === '') {
                     product.highlightedName = product.name;
                     product.highlightedDescription = product.description;

@@ -14,8 +14,27 @@ import * as modalActions from '../actions/ModalActions';
 import * as modalCloseActions from '../actions/ModalCloseActions';
 import 'react-notifications/lib/notifications.css';
 import {NotificationContainer} from 'react-notifications';
+import { loadingFirstData } from '../actions/LoadingFirstData';
+import PropTypes from 'prop-types';
 
 class App extends Component {
+
+
+    componentWillMount() {
+
+        let promise = new Promise((resolve) => {
+            async function getProducts () {
+                const response = await fetch('http://localhost:3001/products');
+                const { products } = await response.json();
+                resolve (products)
+            }
+            getProducts ();
+        });
+        promise
+            .then(result => (this.props.loadingFirstData(result)))
+    }
+
+
     render() {
         const { productList } = this.props;
         const { setActivePageNumber } = this.props.paginationActions;
@@ -23,6 +42,8 @@ class App extends Component {
         const { typeOfFiltration } =  this.props.dropdownSortButtonActions;
         const { showModal } =  this.props.modalActions;
         const { modalClose } =  this.props.modalCloseActions;
+
+
 
         return <div >
             <Header/>
@@ -42,6 +63,11 @@ class App extends Component {
     }
 }
 
+App.propTypes = {
+    loadingFirstData: PropTypes.func.isRequired
+};
+
+
 function mapStateToProps(state) {
     return {
         productList: state.productList
@@ -54,7 +80,8 @@ function mapDispatchToProps(dispatch) {
         searchActions: bindActionCreators(searchActions, dispatch),
         dropdownSortButtonActions: bindActionCreators(dropdownSortButtonActions, dispatch),
         modalActions:bindActionCreators(modalActions, dispatch),
-        modalCloseActions:bindActionCreators(modalCloseActions, dispatch)
+        modalCloseActions:bindActionCreators(modalCloseActions, dispatch),
+        loadingFirstData:bindActionCreators(loadingFirstData, dispatch)
     }
 }
 
