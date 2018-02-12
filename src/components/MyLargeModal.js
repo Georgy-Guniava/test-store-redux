@@ -1,11 +1,7 @@
 import React, {Component} from 'react';
 import Rater from 'react-rater-plus';
-import {Modal, Carousel,Button } from 'react-bootstrap'
+import {Modal, Carousel, Button } from 'react-bootstrap'
 import PropTypes from 'prop-types';
-
-
-
-
 
 export default class MyLargeModal extends Component {
     constructor(props) {
@@ -14,13 +10,14 @@ export default class MyLargeModal extends Component {
     }
 
     lgClose() {
-        this.props.modalClose()
+        this.props.onClick()
     }
 
     render() {
 
 
-        const { activeProduct } = this.props;
+        const { activeproduct } = this.props;
+        const product = activeproduct;
 
         return (
 
@@ -33,29 +30,29 @@ export default class MyLargeModal extends Component {
 
             >
                 <Modal.Header closeButton>
-                    <Modal.Title id="contained-modal-title-lg">React Test Store/{activeProduct.name}</Modal.Title>
+                    <Modal.Title id="contained-modal-title-lg">React Test Store/{product.name}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body >
                     <Carousel>
                         <Carousel.Item>
-                            <img className="center-block"  width={500} height={500} alt={activeProduct.name} src={require("../styles/img.jpg")}/>
+                            <img className="center-block"  width={500} height={500} alt={product.name} src={require("../styles/img.jpg")}/>
                             <Carousel.Caption>
-                                <h3>{activeProduct.name}</h3>
-                                <p>{activeProduct.description}</p>
+                                <h3 className="modalText">{product.name}</h3>
+                                <p className="modalText">{product.description}</p>
                             </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item>
-                            <img className="center-block"  width={500} height={500} alt={activeProduct.name} src={require("../styles/img.jpg")} />
+                            <img className="center-block"  width={500} height={500} alt={product.name} src={require("../styles/img.jpg")} />
                             <Carousel.Caption>
-                                <h3>{activeProduct.name}</h3>
-                                <h3><Rater total={5} rating={activeProduct.rating} interactive={false} />Rating</h3>
+                                <h3 className="modalText">{product.name}</h3>
+                                <h3 className="modalText"><Rater total={5} rating={product.rating} />Rating</h3>
                             </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item>
-                            <img className="center-block" width={500} height={500} alt={activeProduct.name} src={require("../styles/img.jpg")} />
+                            <img className="center-block" width={500} height={500} alt={product.name} src={require("../styles/img.jpg")} />
                             <Carousel.Caption>
-                                <h3>{activeProduct.name}</h3>
-                                <p><strong>Price:</strong> {activeProduct.price} <i className="fa fa-rub" aria-hidden="true"> </i></p>
+                                <h3 className="modalText">{product.name}</h3>
+                                <p className="modalText"><strong>Price:</strong> {product.price} <i className="fa fa-rub" aria-hidden="true"> </i></p>
                             </Carousel.Caption>
                         </Carousel.Item>
                     </Carousel>
@@ -69,7 +66,7 @@ export default class MyLargeModal extends Component {
 }
 
 MyLargeModal.propTypes = {
-    activeProduct: PropTypes.object.isRequired,
-    modalClose: PropTypes.func.isRequired
+    activeproduct: PropTypes.object.isRequired,
+    onClick: PropTypes.func.isRequired
 };
 

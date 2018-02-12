@@ -2,9 +2,6 @@ import {Pagination} from 'react-bootstrap'
 import React, {Component} from "react";
 import PropTypes from 'prop-types';
 
-
-
-
 export default class Paginate extends Component {
     constructor(props) {
         super(props);
@@ -16,8 +13,8 @@ export default class Paginate extends Component {
     }
 
     render() {
-        const { products, active } = this.props;
-        let paginLength = Math.ceil((products.length) / 4);
+        const { products, active, lotProductsActive } = this.props;
+        let paginLength = Math.ceil((products.length) / lotProductsActive);
         let items = [];
         for (let number = 1; number <= paginLength; number++) {
             items.push(
@@ -38,5 +35,6 @@ export default class Paginate extends Component {
 Paginate.propTypes = {
     products: PropTypes.array.isRequired,
     active: PropTypes.number.isRequired,
-    setActivePageNumber: PropTypes.func.isRequired
+    setActivePageNumber: PropTypes.func.isRequired,
+    lotProductsActive: PropTypes.number.isRequired
 };

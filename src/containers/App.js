@@ -16,9 +16,10 @@ import 'react-notifications/lib/notifications.css';
 import {NotificationContainer} from 'react-notifications';
 import { loadingFirstData } from '../actions/LoadingFirstData';
 import PropTypes from 'prop-types';
+import LotOfProducts from '../components/LotOfProducts';
+import * as lotOfProductsActions from '../actions/LotOfProductsActions';
 
 class App extends Component {
-
 
     componentWillMount() {
 
@@ -34,16 +35,14 @@ class App extends Component {
             .then(result => (this.props.loadingFirstData(result)))
     }
 
-
     render() {
         const { productList } = this.props;
         const { setActivePageNumber } = this.props.paginationActions;
         const { onSearch } =  this.props.searchActions;
         const { typeOfFiltration } =  this.props.dropdownSortButtonActions;
         const { showModal } =  this.props.modalActions;
-        const { modalClose } =  this.props.modalCloseActions;
-
-
+        const { modalclose } =  this.props.modalCloseActions;
+        const { setLotProducts } =  this.props.lotOfProductsActions;
 
         return <div >
             <Header/>
@@ -51,12 +50,18 @@ class App extends Component {
                 <div className="row">
                     <SearchBar onSearch={onSearch}/>
                     <DropdownSortButton dropDownItems={productList.dropDownItems} typeOfFiltration={typeOfFiltration}/>
+                    <LotOfProducts lotProductsActive={productList.lotProductsActive}
+                                   lotProductsItems={productList.lotProductsItems}
+                                   setLotProducts={setLotProducts}/>
                 </div>
-                <MyLargeModal show={productList.lgShow} modalClose={modalClose} activeProduct={productList.activeProduct} />
+                <MyLargeModal show={productList.lgShow} onClick={modalclose} activeproduct={productList.activeProduct} />
                 <div id="showProducts" className="row">
                     <ProductList products={productList.productsList} showModal={showModal}/>
                 </div>
-                <Paginate products={productList.products} active={productList.active} setActivePageNumber={setActivePageNumber}  />
+                <Paginate products={productList.products}
+                          active={productList.active}
+                          lotProductsActive={productList.lotProductsActive}
+                          setActivePageNumber={setActivePageNumber} />
             </div>
             <NotificationContainer/>
         </div>
@@ -66,7 +71,6 @@ class App extends Component {
 App.propTypes = {
     loadingFirstData: PropTypes.func.isRequired
 };
-
 
 function mapStateToProps(state) {
     return {
@@ -81,7 +85,8 @@ function mapDispatchToProps(dispatch) {
         dropdownSortButtonActions: bindActionCreators(dropdownSortButtonActions, dispatch),
         modalActions:bindActionCreators(modalActions, dispatch),
         modalCloseActions:bindActionCreators(modalCloseActions, dispatch),
-        loadingFirstData:bindActionCreators(loadingFirstData, dispatch)
+        loadingFirstData:bindActionCreators(loadingFirstData, dispatch),
+        lotOfProductsActions:bindActionCreators(lotOfProductsActions, dispatch)
     }
 }
 

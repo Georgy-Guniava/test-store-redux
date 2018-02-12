@@ -6,7 +6,7 @@ export default class Header extends Component {
     render() {
         return (
             <PageHeader className="App" id="header">
-                React Test Store <small>Добро пожаловать Welcome 歡迎 Willkommen zurück</small>
+                React Test Store <small>Welcome</small>
             </PageHeader>
         );
     }

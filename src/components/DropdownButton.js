@@ -2,10 +2,7 @@ import React, {Component} from "react";
 import {DropdownButton, MenuItem} from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
-
-const title = "default";
-const i = 1;
-
+const title = "default";;
 
 export default class DropdownSortButton extends Component {
     constructor(props) {
@@ -22,12 +19,12 @@ export default class DropdownSortButton extends Component {
         const { dropDownItems } = this.props;
 
         return (
-            <div className='col-sm-1'>
+            <div className='col-sm-2 col-md-2 col-lg-1 col-xs-12'>
                 <DropdownButton
                     bsStyle={title.toLowerCase()}
                     title={"Filter"}
-                    key={i}
-                    id={`dropdown-basic-${i}`}
+                    key={1}
+                    id={`dropdown-basic-${1}`}
                 >
                     {dropDownItems.map(item => <MenuItem key={item.id}
                                                          id={item.id}

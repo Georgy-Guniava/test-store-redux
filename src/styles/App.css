@@ -27,7 +27,6 @@
   width: 50%;
   margin-left: auto;
   margin-right: auto;
-  text-shadow: 1px 1px 1px #3a62ff, 0 0 1em #3a62ff;;
 }
 
 b {
@@ -43,6 +42,13 @@ div.thumbnail:hover{
   border: 1px solid #ddd;
   border-radius: 4px;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3), 0 1px 0px rgba(0, 0, 0, 0.1)
+}
+
+.modalText {
+  display: block;
+  color: #333333;
+  text-shadow: 0 1px 2px rgba(0,0,0,.6);
+
 }
 
 #showProducts div {

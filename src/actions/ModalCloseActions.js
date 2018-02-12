@@ -1,4 +1,4 @@
-export function modalClose() {
+export function modalclose() {
 
 
     return{
