@@ -20,6 +20,10 @@
   text-align: center;
 }
 
+.carousel-caption {
+  position: static;
+}
+
 .notFound {
   text-align: center;
   color: black;

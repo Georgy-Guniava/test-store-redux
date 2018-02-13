@@ -1,7 +1,7 @@
 export function onSearch(searchText) {
 
 
-    return{
+    return {
         type: 'SEARCH_PRODUCTS',
         payload: searchText
 

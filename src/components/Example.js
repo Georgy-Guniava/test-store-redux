@@ -1,6 +1,5 @@
 import {NotificationManager} from 'react-notifications';
 
-
 export function createNotification(object) {
     return () => {
         switch (object.type) {
